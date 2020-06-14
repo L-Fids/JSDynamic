@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #d3d3d3;
     background-image: url("https://www.transparenttextures.com/patterns/arches.png");
@@ -6,7 +10,19 @@ body {
 }
 
 h1 {
-    font-family: 'Sriracha', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
 }
 
 .container {
@@ -17,7 +33,7 @@ h1 {
 
 .page__header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -25,11 +41,12 @@ h1 {
 }
 
 .page__name {
-    padding: 0 0 0 0.5em;
+    padding: 0 0 0 1em;
 }
 
 .main__nav ul {
     list-style-type: none;
+    text-align: center;
 }
 
 .main__nav li {
@@ -60,6 +77,10 @@ section h2 {
     max-width: 100%;
 }
 
+.container__focus {
+    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+}
+
 .card {
     padding: 1em;
     margin: 0.5em;
@@ -79,5 +100,11 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .page__header {
+        flex-direction: row;
     }
 }

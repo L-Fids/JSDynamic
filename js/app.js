@@ -30,15 +30,3 @@ for (let i = 0; i < sections.length; i++) {
 
 navMenu.appendChild(fragment);
 
-// create anchor element with proper href (#sectionName)
-// add event listeners.
-
-
-// onclick, execute this function
-// function scrollToSection (sectionName) {
-//     let scrollTo = document.getElementById(sectionName);
-//     scrollTo.scrollIntoView({behavior: "smooth"});
-// }
-
-// // place event listener on nav__list
-// navMenu.addEventListener('click', scrollToSection);
