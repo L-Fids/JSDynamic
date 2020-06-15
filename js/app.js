@@ -32,13 +32,12 @@ navMenu.appendChild(fragment);
 
 // INTERSECTION OBSERVER
 
-const sectionOne = document.querySelector('#container-one');
 const allSections = document.querySelectorAll(".section__container");
 
 const options = {
     root: null, // the viewport
     threshold: 1, // a 0 - 1 scale; at 1, it will fire when 100% of the target is showing on the screen
-    rootMargin: "0px"
+    rootMargin: "0px 0px -100px 0px"
  };
 
 const observer = new IntersectionObserver(function(entries, observer) {
