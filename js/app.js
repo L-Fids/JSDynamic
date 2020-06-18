@@ -34,15 +34,16 @@ navMenu.appendChild(fragment);
 
 const allSections = document.querySelectorAll(".section__container");
 
+// Give me a tight window to compute intersections.
 const options = {
     root: null,
-    threshold: 0.6,
+    threshold: 0.5,
     rootMargin: '-25% 0% -25% 0%'
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
-        // don't run the code if entry is not interesecting
+        // don't run the code if entry is not intersecting
         if (!entry.isIntersecting) {
             return;
         }
@@ -60,7 +61,7 @@ allSections.forEach(section => {
     observer.observe(section);
 })
 
-// Sticky Nav
+// Sticky NAV
 
 window.onscroll = function() {stickyNav()};
 
