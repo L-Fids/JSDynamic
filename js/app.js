@@ -38,7 +38,7 @@ const allSections = document.querySelectorAll(".section__container");
 const options = {
     root: null,
     threshold: 0.2,
-    rootMargin: '-25% 0% -25% 0%'
+    rootMargin: '-25% 0% -35% 0%'
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
