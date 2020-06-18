@@ -51,7 +51,7 @@ p {
 }
 
 .sticky + .page__main {
-    padding-top: 60px;
+    padding-top: 5em;
 }
 
 .main__nav ul {
