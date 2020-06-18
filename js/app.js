@@ -37,7 +37,7 @@ const allSections = document.querySelectorAll(".section__container");
 // Give me a tight window to compute intersections.
 const options = {
     root: null,
-    threshold: 0.5,
+    threshold: 0.2,
     rootMargin: '-25% 0% -25% 0%'
 };
 
@@ -53,7 +53,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
         let hrefSelect = document.querySelector(hrefLiteral);
         //toggle active class
         entry.target.classList.toggle('focus');
-        hrefSelect.classList.toggle('focus');
+        hrefSelect.classList.toggle('nav__focus');
     })
 }, options);
 
@@ -65,7 +65,8 @@ allSections.forEach(section => {
 
 window.onscroll = function() {stickyNav()};
 
-var navbar = document.querySelector(".page__header");
+var navbar = document.querySelector(".main__nav");
+var mainContent = document.querySelector(".page__main");
 
 var sticky = navbar.offsetTop;
 

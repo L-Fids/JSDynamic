@@ -22,7 +22,15 @@ h3 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1em;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #c40d68;
 }
 
 .container {
@@ -38,6 +46,7 @@ p {
     justify-content: space-between;
     width: 100%;
     background-color: #FFF;
+    margin: 0;
 }
 
 .page__name {
@@ -51,11 +60,13 @@ p {
 }
 
 .sticky + .page__main {
-    padding-top: 8em;
+    padding-top: 5em;
 }
 
 .main__nav {
     text-align: center;
+    margin: 0 0.5rem;
+    background-color: #FFF;
 }
 
 .main__nav ul {
@@ -66,12 +77,26 @@ p {
 .main__nav li {
     display: inline-block;
     padding: 0.5em;
+    font-size: 1rem;
 }
 
 .nav__list {
     margin: 0 0 0 0;
     padding: 1em;
-    width: 90%;
+    width: 100%;
+}
+
+.focus {
+    border: 2px solid #000;
+}
+
+.nav__focus {
+    background-color: #000;
+    color: #FFF !important;
+}
+
+.page__main {
+    margin-top: 4em;
 }
 
 main {
@@ -89,16 +114,12 @@ section h2 {
 
 .section__container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     background-color: white;
     border-radius: 1em;
     height: auto;
     max-width: 100%;
-}
-
-.focus {
-    border: 2px solid #000;
 }
 
 .card {
@@ -120,8 +141,8 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .sticky + .page__main {
-        padding-top: 5em;
+    .page__main {
+        margin-top: 3em;
     }
 
     .page__name {
@@ -136,9 +157,5 @@ footer {
 @media screen and (min-width: 1024px) {
     .section__container {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .page__header {
-        flex-direction: row;
     }
 }
