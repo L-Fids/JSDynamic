@@ -44,6 +44,16 @@ p {
     padding: 0 0 0 1em;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .page__main {
+    padding-top: 60px;
+}
+
 .main__nav ul {
     list-style-type: none;
     text-align: center;
@@ -78,7 +88,7 @@ section h2 {
 }
 
 .focus {
-    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+    border: 2px solid #000;
 }
 
 .card {

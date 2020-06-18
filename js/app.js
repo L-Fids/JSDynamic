@@ -35,21 +35,43 @@ navMenu.appendChild(fragment);
 const allSections = document.querySelectorAll(".section__container");
 
 const options = {
-    root: null, // the viewport
-    threshold: 1, // a 0 - 1 scale; at 1, it will fire when 100% of the target is showing on the screen
-    rootMargin: "0px 0px -100px 0px"
- };
+    root: null,
+    threshold: 0.6,
+    rootMargin: '-25% 0% -25% 0%'
+};
 
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
-        if(!entry.isIntersecting) {
-           return;
+        // don't run the code if entry is not interesecting
+        if (!entry.isIntersecting) {
+            return;
         }
-        console.log(entry);
+        // select the nav item corresponding to the active section
+        let navLink = entry.target.parentNode.id;
+        let hrefLiteral = `a[href="#${navLink}"]`;
+        let hrefSelect = document.querySelector(hrefLiteral);
+        //toggle active class
         entry.target.classList.toggle('focus');
+        hrefSelect.classList.toggle('focus');
     })
 }, options);
 
 allSections.forEach(section => {
     observer.observe(section);
 })
+
+// Sticky Nav
+
+window.onscroll = function() {stickyNav()};
+
+var navbar = document.querySelector(".page__header");
+
+var sticky = navbar.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
