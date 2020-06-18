@@ -58,6 +58,7 @@ a:hover {
     position: fixed;
     top: 0;
     padding-top: 3em;
+    width: 100%;
 }
 
 .sticky + .page__main {
